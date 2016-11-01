@@ -32,7 +32,7 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="{{asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
-    <link rel="stylesheet" href="{{asset('bootstrap/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{asset('fonts/th_baijam.css')}}">
 
     <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="{{asset('text/css')}}'">
@@ -81,7 +81,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="{{asset('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -94,7 +94,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="{{asset('dist/img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         AdminLTE Design Team
@@ -106,7 +106,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="{{asset('dist/img/user4-128x128.jpg') }}" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Developers
@@ -118,7 +118,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="{{asset('dist/img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Sales Department
@@ -130,7 +130,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="{{asset('dist/img/user4-128x128.jpg') }}" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Reviewers
@@ -591,12 +591,11 @@
 </script>
 
 <script src="{{asset('js/jquery.js')}}"></script>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="{{asset('plugins/morris/morris.min.js')}}"></script>
+<!--script src="{{asset('plugins/morris/morris.min.js')}}"></script-->
 <!-- Sparkline -->
 <script src="{{asset('plugins/sparkline/jquery.sparkline.min.js')}}"></script>
 <!-- jvectormap -->
@@ -618,9 +617,44 @@
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/app.min.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
+<!--script src="{{asset('dist/js/pages/dashboard.js')}}"></script-->
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('dist/js/demo.js')}}"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#vs-confirm").click(function(){
+            var first = $("#first-select").val(); 
+            var second = $("#secend-select").val(); 
+            $( "#first-rule" ).empty();
+            $( "#second-rule" ).empty();
+            if (first == 541) {
+                $("#rule-mba54").clone().appendTo("#first-rule");
+            }
+            if (first == 542) {
+                $("#rule-phd54").clone().appendTo("#first-rule");
+            }
+            if (first == 571) {
+                $("#rule-mba57").clone().appendTo("#first-rule");
+            }
+            if (first == 572) {
+                $("#rule-phd57").clone().appendTo("#first-rule");
+            }
 
+            if (second == 541) {
+                $("#rule-mba54").clone().appendTo("#second-rule");
+            }
+            if (second == 542) {
+                $("#rule-phd54").clone().appendTo("#second-rule");
+            }
+            if (second == 571) {
+                $("#rule-mba57").clone().appendTo("#second-rule");
+            }
+             if (second == 572) {
+                $("#rule-phd57").clone().appendTo("#second-rule");
+            }
+        });
+    }); 
+ 
+</script>
 </body>
 </html>
