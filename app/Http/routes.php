@@ -23,7 +23,7 @@ Route::get('/inf','PageController@getpageInf');
 Route::get('/contact','PageController@getpageContact');
 Route::get('/professor','PageController@getpageProfessor');
 Route::get('/reqrule','PageController@getpageReqRule');
-Route::get('/admin','PageController@getAdminControl');
+Route::get('admin','PageController@getAdminControl');
 
 
 Route::get('/condb','PageController@ConDB');

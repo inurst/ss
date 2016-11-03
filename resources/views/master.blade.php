@@ -32,7 +32,7 @@
                         <a href="/contact">Contact</a>
                     </li>
                     <li>
-                        <a href="/admin">Admin</a>
+                        <a href="{{url('admin')}}">Admin</a>
                     </li>
                     
                    <!-- <li class="dropdown">
